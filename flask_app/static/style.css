@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+  
+div {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.3rem;
+    font-family: 'Fontdiner Swanky', cursive;
+}
+
+.message {
+    color: #0074D9;
+    margin-top: 20%;
+    position: relative;
+    animation: rubberBand 3s;
+    animation-delay: 2s;
+    animation-iteration-count: 2;
+} 
+
+.text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    animation: bounceInUp 4s;
+}
