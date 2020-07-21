@@ -10,7 +10,7 @@ test:
     #python -m pytest --nbval notebook.ipynb
     
 lint:
-	hadolint Dockerfile
+	hadolint --ignore DL3008 Dockerfile
 	flake8 --ignore E24,W504 flask_app/**.py
 
 all: install lint test

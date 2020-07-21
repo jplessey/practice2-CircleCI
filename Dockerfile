@@ -1,4 +1,4 @@
-FROM python:3.7.3-stretch
+FROM python:3.8-slim-buster
 
 # Working Directory
 WORKDIR /app
@@ -10,6 +10,12 @@ COPY . flask_app/. /app/
 # hadolint ignore=DL3013
 RUN pip install --upgrade pip &&\
     pip install --trusted-host pypi.python.org -r requirements.txt
+    
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    wget \
+    make \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*    
 
 # Expose port 80
 EXPOSE 80
